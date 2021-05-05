@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:web_socket_channel/io.dart';
+import 'package:web_socket_channel/html.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:web_socket_channel/status.dart';
 import 'dart:async';
@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    channel = IOWebSocketChannel.connect('wss://remote-control.stevezheng.cf');
+    channel = HtmlWebSocketChannel.connect('wss://remote-control.stevezheng.cf');
     channel.sink.add("queryState");
     new Timer.periodic(
         Duration(seconds: 20), (timer) => _sendMessage("queryState"));

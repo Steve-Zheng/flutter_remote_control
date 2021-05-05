@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stevezheng.flutter_remote_control">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="ESP Remote Control"
         android:icon="@mipmap/ic_launcher">
